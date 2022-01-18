@@ -32,17 +32,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style_original.css" rel="stylesheet">
 
-  <!-- import jspdf -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.0/jspdf.umd.min.js"></script>
-  <script type = "text/javascript">
-    function make_pdf() {
-      var doc = new jsPDF();
-      doc.text(10, 10, 'Hello world!');
-      doc.save('actionplan.pdf');
-    }
-  </script>
-  <!-- Call the submit.js to generate the pdf -->
-  <!-- <script type = "text/javascript" src="submit.js"></script>   -->
 
   <!-- =======================================================
   * Template Name: Squadfree - v4.7.0
@@ -69,12 +58,12 @@
       </div>
       <div></div>
     </div>
-    <br><br>
-    <br>
-    <div class="container d-flex align-items-center justify-content-between">
+    <!-- <br><br>
+    <br> -->
+    <!-- <div class="container d-flex align-items-center justify-content-between">
         <div></div>
         <div>
-        <form onclick="return make_pdf()" action="submit.php" method="POST">
+        <form action="submit.php" method="POST">
           <table>
             <tr>
               <td>how much less beef (in some measurement)?</td>
@@ -94,15 +83,89 @@
             </tr>
           </table>
           <input type="submit" name="submit">
-          <!-- <button id="clickAll">Submit All</button> -->
+          <button id="clickAll">Submit All</button> -->
         </form>
         </div>
         <div></div>
     </div>
   </section><!-- End Contact Section -->
 
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>Action Plan</h2>
+        <p>Pick at least one carbon-reduction goal and identify realistic, specific, concrete actions you can take within the next year to achieve your goal. Be sure to describe how and when you would implement each action. Work together to stress-test the plan: identify potential obstacles, and then generate solutions for overcoming the obstacles.</p>
+      </div>
+
+      <div class="row" data-aos="fade-in">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-food">Food</li>
+            <li data-filter=".filter-shopping">Shopping</li>
+            <li data-filter=".filter-travel">Travel</li>
+            <li data-filter=".filter-energy">Home Energy</li>
+            <li data-filter=".filter-other">Other</li>
+          </ul>
+        </div>
+      </div>
+
+      <form>
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          <!-- food -->
+          <div class="col-xs portfolio-item filter-food">
+              How much less beef <input type="number" value=0 name="beef">
+          </div>
+
+          <div class="col-xs portfolio-item filter-food">
+            How much less milk <input type="number" value=0 name="milk">
+          </div>
+
+          <div class="col-xs portfolio-item filter-food">
+            How much less eggs <input type="number" value=0 name="egg">
+          </div>
+
+          <!-- travel -->
+          <div class="col-xs portfolio-item filter-travel">
+            How much less air travekling <input type="number" value=0 name="air">
+          </div>
+
+          <div class="col-xs portfolio-item filter-travel">
+            How much less car traveling <input type="number" value=0 name="car">
+          </div>
+
+          <!-- energy -->
+          <div class="col-xs portfolio-item filter-energy">
+            How much less use home home energy of some type <input type="number" value=0 name="energy">
+          </div>
+
+          <!-- other -->
+          <div class="col-xs portfolio-item filter-other">
+            Other <input type="text" value="none" name="energy">
+          </div>
+
+        </div>
+
+        <div class="container d-flex align-items-center justify-content-between">
+          <div></div>
+          <div>
+            <input type="submit" name="submit">
+          </div>
+          <div></div>
+        </div>
+      </form>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
   </main><!-- End #main -->
 
+
+
+  
     <!-- ======= Footer ======= -->
   <footer id="footer">
 
