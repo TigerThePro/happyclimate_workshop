@@ -54,7 +54,7 @@
     <div class="container d-flex align-items-center justify-content-between">
       <div></div>
       <div>
-        <h4>Insert positive intergers</h4>
+        <h5>Share the link for each team member, pick carbon-reduction goals and identify realistic, specific, concrete actions you can take within the next year to achieve your goal. Be sure to describe how and when you would implement each action. Work together to stress-test the plan: identify potential obstacles, and then generate solutions for overcoming the obstacles.</h5>
       </div>
       <div></div>
     </div>
@@ -96,7 +96,6 @@
 
       <div class="section-title" data-aos="fade-in" data-aos-delay="100">
         <h2>Action Plan</h2>
-        <p>Pick at least one carbon-reduction goal and identify realistic, specific, concrete actions you can take within the next year to achieve your goal. Be sure to describe how and when you would implement each action. Work together to stress-test the plan: identify potential obstacles, and then generate solutions for overcoming the obstacles.</p>
       </div>
 
       <div class="row" data-aos="fade-in">
@@ -106,40 +105,121 @@
             <li data-filter=".filter-food">Food</li>
             <li data-filter=".filter-shopping">Shopping</li>
             <li data-filter=".filter-travel">Travel</li>
-            <li data-filter=".filter-energy">Home Energy</li>
+            <!-- <li data-filter=".filter-energy">Home Energy</li> -->
             <li data-filter=".filter-other">Other</li>
           </ul>
         </div>
       </div>
 
-      <form>
-        <div class="row portfolio-container" data-aos="fade-up">
+      <form action="submit.php" method="POST">
+        <div class="row portfolio-container">
 
           <!-- food -->
           <div class="col-xs portfolio-item filter-food">
-              How much less beef <input type="number" value=0 name="beef">
+            I would like to switch from a
+            meat-based diet to a plant-based
+            diet. <input type="checkbox" name="plant-diet">
           </div>
 
           <div class="col-xs portfolio-item filter-food">
-            How much less milk <input type="number" value=0 name="milk">
+            I would like to reduce 
+            <input type="number" value=0 min=0 name="red_meat_x"> 
+            servings of red meat a week.
           </div>
 
           <div class="col-xs portfolio-item filter-food">
-            How much less eggs <input type="number" value=0 name="egg">
+            I would like to reduce 
+            <input type="number" value=0 min=0 name="other_meat_x"> 
+            servings of other meat meat a week.
+          </div>
+
+          <div class="col-xs portfolio-item filter-food">
+            I would like to reduce 
+            <input type="number" value=0 min=0 name="cheese_x"> 
+            servings of cheese a week.
+          </div>
+
+          <div class="col-xs portfolio-item filter-food">
+            I would like to reduce 
+            <input type="number" value=0 min=0 name="dairy_milk_x"> 
+            servings of dairy milk a week.
+          </div>
+
+          <div class="col-xs portfolio-item filter-food">
+            I would like to reduce 
+            <input type="number" value=0 min=0 name="chocolate_x"> 
+            servings of chocolate a week.
+          </div>
+
+          <div class="col-xs portfolio-item filter-food">
+            I would like to reduce 
+            <input type="number" value=0 min=0 name="coffee_x"> 
+            servings of coffee a week.
           </div>
 
           <!-- travel -->
           <div class="col-xs portfolio-item filter-travel">
-            How much less air travekling <input type="number" value=0 name="air">
+            I would like to reduce driving by
+            <input type="number" value=0 min=0 name="driving_x"> miles a week.
           </div>
 
           <div class="col-xs portfolio-item filter-travel">
-            How much less car traveling <input type="number" value=0 name="car">
+            I would like to carpool <input type="number" value=0 min=0 name="carpool_x"> friends for <input type="number" value=0 min=0 name="carpool_y"> miles a week.
+          </div>
+
+          <div class="col-xs portfolio-item filter-travel">
+            I would like to avoid <input type="number" value=0 min=0 name="flight_x"> number of <input type="number" value=0 min=0 name="flight_y">-hour flights that generate low socialconnection a year (a round trip counts as two flights.)
           </div>
 
           <!-- energy -->
-          <div class="col-xs portfolio-item filter-energy">
-            How much less use home home energy of some type <input type="number" value=0 name="energy">
+          <div class="col-xs portfolio-item filter-shopping">
+            I would like to avoid buying
+            <input type="number" value=0 min=0 name="phone_x">
+            number of smart phone next year.
+          </div>
+
+          <div class="col-xs portfolio-item filter-shopping">
+            I would like to avoid buying
+            <input type="number" value=0 min=0 name="laptop_x">
+            number of laptop next year.
+          </div>
+
+          <div class="col-xs portfolio-item filter-shopping">
+            I would like to avoid buying
+            <input type="number" value=0 min=0 name="tv_x">
+            number of tv next year.
+          </div>
+
+          <div class="col-xs portfolio-item filter-shopping">
+            I would like to avoid buying
+            <input type="number" value=0 min=0 name="jeans_x">
+            number of jeans next year.
+          </div>
+
+          <div class="col-xs portfolio-item filter-shopping">
+            I would like to avoid buying
+            <input type="number" value=0 min=0 name="shoes_x">
+            number of shoes next year.
+          </div>
+
+          <div class="col-xs portfolio-item filter-shopping">
+            I would like to avoid buying
+            <input type="number" value=0 min=0 name="tops_x">
+            number of tops next year. (e.g., shirts, sweaters, and
+            jackets)
+          </div>
+
+          <div class="col-xs portfolio-item filter-shopping">
+            I would like to avoid buying
+            <input type="number" value=0 min=0 name="bottoms_x">
+            number of bottoms next year.(e.g., shorts, sweat
+            pants, and leggings)
+          </div>
+
+          <div class="col-xs portfolio-item filter-shopping">
+            I would like to avoid buying
+            <input type="number" value=0 min=0 name="dresses or suits_x">
+            number of bottoms next year.
           </div>
 
           <!-- other -->
