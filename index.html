@@ -32,6 +32,8 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style_original.css" rel="stylesheet">
 
+  
+
 
   <!-- =======================================================
   * Template Name: Squadfree - v4.7.0
@@ -57,36 +59,6 @@
         <h5>Share the link for each team member, pick carbon-reduction goals and identify realistic, specific, concrete actions you can take within the next year to achieve your goal. Be sure to describe how and when you would implement each action. Work together to stress-test the plan: identify potential obstacles, and then generate solutions for overcoming the obstacles.</h5>
       </div>
       <div></div>
-    </div>
-    <!-- <br><br>
-    <br> -->
-    <!-- <div class="container d-flex align-items-center justify-content-between">
-        <div></div>
-        <div>
-        <form action="submit.php" method="POST">
-          <table>
-            <tr>
-              <td>how much less beef (in some measurement)?</td>
-              <td> <input type="number" value=0 name="beef"> </td>
-            </tr>
-            <tr>
-              <td>how much less chicken (in some measurement)?</td>
-              <td><input type="number" value=0 name="chicken"></td>
-            </tr>
-            <tr>
-              <td>how much less milk (in some measurement)? </td>
-              <td><input type="number" value=0 name="milk"></td>
-            </tr>
-            <tr>
-              <td>how much less eggs (in some measurement)? </td>
-              <td><input type="number" value=0 name="egg"></td>
-            </tr>
-          </table>
-          <input type="submit" name="submit">
-          <button id="clickAll">Submit All</button> -->
-        </form>
-        </div>
-        <div></div>
     </div>
   </section><!-- End Contact Section -->
 
@@ -118,114 +90,159 @@
           <div class="col-xs portfolio-item filter-food">
             I would like to switch from a
             meat-based diet to a plant-based
-            diet. <input type="radio" name="plant_diet" value=True>Yes</input>
-            <input type="radio" name="plant_diet" value=False checked>No</input>
+            diet. <input type="radio" name="plant_diet" id="diet_yes" value="yes"">Yes</input>
+            <input type="radio" name="plant_diet" id="diet_no" value="no" checked>No</input>
+            <br>
+            You will reduce <span id="diet_ouput">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-food">
             I would like to reduce 
-            <input type="number" value=0 min=0 name="red_meat_x"> 
+            <input type="number" value=0 min=0 name="red_meat_x" id="red_meat" class="normal"> 
             servings of red meat a week.
+            <br>
+            You will reduce <span id="red_meat_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-food">
             I would like to reduce 
-            <input type="number" value=0 min=0 name="other_meat_x"> 
+            <input type="number" value=0 min=0 name="other_meat_x" id="other_meat" class="normal"> 
             servings of other meat meat a week.
+            <br>
+            You will reduce <span id="other_meat_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-food">
             I would like to reduce 
-            <input type="number" value=0 min=0 name="cheese_x"> 
+            <input type="number" value=0 min=0 name="cheese_x" id="cheese" class="normal"> 
             servings of cheese a week.
+            <br>
+            You will reduce <span id="cheese_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-food">
             I would like to reduce 
-            <input type="number" value=0 min=0 name="dairy_milk_x"> 
+            <input type="number" value=0 min=0 name="dairy_milk_x" id="dairy_milk" class="normal"> 
             servings of dairy milk a week.
+            <br>
+            You will reduce <span id="dairy_milk_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-food">
             I would like to reduce 
-            <input type="number" value=0 min=0 name="chocolate_x"> 
+            <input type="number" value=0 min=0 name="chocolate_x" id="chocolate" class="normal"> 
             servings of chocolate a week.
+            <br>
+            You will reduce <span id="chocolate_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-food">
             I would like to reduce 
-            <input type="number" value=0 min=0 name="coffee_x"> 
+            <input type="number" value=0 min=0 name="coffee_x" id="coffee" class="normal"> 
             servings of coffee a week.
+            <br>
+            You will reduce <span id="coffee_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <!-- travel -->
           <div class="col-xs portfolio-item filter-travel">
             I would like to reduce driving by
-            <input type="number" value=0 min=0 name="driving_x"> miles a week.
+            <input type="number" value=0 min=0 name="driving_x" id="driving" class="normal"> 
+            miles a week.
+            <br>
+            You will reduce <span id="driving_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-travel">
-            I would like to carpool <input type="number" value=0 min=0 name="carpool_x"> friends for <input type="number" value=0 min=0 name="carpool_y"> miles a week.
+            I would like to carpool 
+            <input type="number" value=0 min=0 name="carpool_x" id="carpool_x"> 
+            friends for 
+            <input type="number" value=0 min=0 name="carpool_y" id="carpool_y"> 
+            miles a week.
+            <br>
+            You will reduce <span id="carpool_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-travel">
-            I would like to avoid <input type="number" value=0 min=0 name="flight_x"> number of <input type="number" value=0 min=0 name="flight_y">-hour flights that generate low socialconnection a year (a round trip counts as two flights.)
+            I would like to avoid 
+            <input type="number" value=0 min=0 name="flight_x" id="flight_x"> 
+            number of 
+            <input type="number" value=0 min=0 name="flight_y" id="flight_y">-hour 
+            flights that generate low socialconnection a year (a round trip counts as two flights.)
+            <br>
+            You will reduce <span id="flight_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <!-- shopping -->
           <div class="col-xs portfolio-item filter-shopping">
             I would like to avoid buying
-            <input type="number" value=0 min=0 name="phone_x">
+            <input type="number" value=0 min=0 name="phone_x" id="phone" class="normal">
             number of smart phone next year.
+            <br>
+            You will reduce <span id="phone_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-shopping">
             I would like to avoid buying
-            <input type="number" value=0 min=0 name="laptop_x">
+            <input type="number" value=0 min=0 name="laptop_x" id="laptop" class="normal">
             number of laptop next year.
+            <br>
+            You will reduce <span id="laptop_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-shopping">
             I would like to avoid buying
-            <input type="number" value=0 min=0 name="tv_x">
+            <input type="number" value=0 min=0 name="tv_x" id="tv" class="normal">
             number of tv next year.
+            <br>
+            You will reduce <span id="tv_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-shopping">
             I would like to avoid buying
-            <input type="number" value=0 min=0 name="jeans_x">
+            <input type="number" value=0 min=0 name="jeans_x" id="jeans" class="normal">
             number of jeans next year.
+            <br>
+            You will reduce <span id="jeans_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-shopping">
             I would like to avoid buying
-            <input type="number" value=0 min=0 name="shoes_x">
+            <input type="number" value=0 min=0 name="shoes_x" id="shoes" class="normal">
             number of shoes next year.
+            <br>
+            You will reduce <span id="shoes_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-shopping">
             I would like to avoid buying
-            <input type="number" value=0 min=0 name="tops_x">
+            <input type="number" value=0 min=0 name="tops_x" id="tops" class="normal">
             number of tops next year. (e.g., shirts, sweaters, and
             jackets)
+            <br>
+            You will reduce <span id="tops_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-shopping">
             I would like to avoid buying
-            <input type="number" value=0 min=0 name="bottoms_x">
+            <input type="number" value=0 min=0 name="bottoms_x" id="bottoms" class="normal">
             number of bottoms next year.(e.g., shorts, sweat
             pants, and leggings)
+            <br>
+            You will reduce <span id="bottoms_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <div class="col-xs portfolio-item filter-shopping">
             I would like to avoid buying
-            <input type="number" value=0 min=0 name="dresses_suits_x">
+            <input type="number" value=0 min=0 name="dresses_suits_x" id="dresses_suits" class="normal">
             number of bottoms next year.
+            <br>
+            You will reduce <span id="d_s_output">0</span> kg of CO<sub>2e</sub> next year.
           </div>
 
           <!-- other -->
           <div class="col-xs portfolio-item filter-other">
-            Other <input type="text" value="none" name="energy">
+            Other <input type="text" value="none" name="other">
           </div>
 
         </div>
@@ -279,6 +296,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- js file -->
+  <script type="text/javascript" src="carbon_calc.js"></script>
 
 </body>
 
