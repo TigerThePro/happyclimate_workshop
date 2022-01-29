@@ -139,25 +139,45 @@ if (document.getElementById("carpool_x") && document.getElementById("carpool_y")
 // run when report page loaded
 function make_report() {
   report_food();
+  report_shopping();
+  report_travelling();
 }
 
 // report food
 function report_food() {
-
-    // var nm = new Map();
-    // nm.set("a", 0);
-    // nm.set("a", 2);
-    // console.log(nm.get("a"));
-
   var food_total = 0;
   food_total += Number(localStorage.getItem("diet"));
-  console.log(food_total);
   food_total += Number(localStorage.getItem("red_meat"));
   food_total += Number(localStorage.getItem("other_meat"));
   food_total += Number(localStorage.getItem("cheese"));
   food_total += Number(localStorage.getItem("dairy_milk"));
   food_total += Number(localStorage.getItem("chocolate"));
   food_total += Number(localStorage.getItem("coffee"));
-  
+  food_total = food_total.toFixed(2);
   document.getElementById("food_report").innerHTML = food_total;
+}
+
+// report shopping
+function report_shopping() {
+  var shopping_total = 0;
+  shopping_total += Number(localStorage.getItem("phone"));
+  shopping_total += Number(localStorage.getItem("laptop"));
+  shopping_total += Number(localStorage.getItem("tv"));
+  shopping_total += Number(localStorage.getItem("jeans"));
+  shopping_total += Number(localStorage.getItem("phone"));
+  shopping_total += Number(localStorage.getItem("tops"));
+  shopping_total += Number(localStorage.getItem("bottoms"));
+  shopping_total += Number(localStorage.getItem("dresses_suits"));
+  shopping_total = shopping_total.toFixed(2);
+  document.getElementById("shopping_report").innerHTML = shopping_total;
+}
+
+// report travelling
+function report_travelling() {
+  var travelling_total = 0;
+  travelling_total += Number(localStorage.getItem("driving"));
+  travelling_total += Number(localStorage.getItem("flight"));
+  travelling_total += Number(localStorage.getItem("carpool"));
+  travelling_total = travelling_total.toFixed(2);
+  document.getElementById("travelling_report").innerHTML = travelling_total;
 }
