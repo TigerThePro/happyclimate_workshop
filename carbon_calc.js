@@ -59,3 +59,31 @@ for (i = 0; i < normal_inputs.length; i++) {
     document.getElementById(output).innerHTML = calc_carbon(x, 1, id);
   })
 }
+
+// flight x
+document.getElementById("flight_x").addEventListener("input", function(e) {
+  var x = this.value;
+  var y = document.getElementById("flight_y").value;
+  document.getElementById("flight_output").innerHTML = calc_carbon(x, y, "flight");
+})
+
+// flight y
+document.getElementById("flight_y").addEventListener("input", function(e) {
+  var x = document.getElementById("flight_x").value;
+  var y = this.value;
+  document.getElementById("flight_output").innerHTML = calc_carbon(x, y, "flight");
+})
+
+// carpool x
+document.getElementById("carpool_x").addEventListener("input", function(e) {
+  var x = this.value;
+  var y = document.getElementById("carpool_y").value;
+  document.getElementById("carpool_output").innerHTML = calc_carbon(x, y, "carpool");
+})
+
+// carpool y
+document.getElementById("carpool_y").addEventListener("input", function(e) {
+  var x = document.getElementById("carpool_x").value;
+  var y = this.value;
+  document.getElementById("carpool_output").innerHTML = calc_carbon(x, y, "carpool");
+})
