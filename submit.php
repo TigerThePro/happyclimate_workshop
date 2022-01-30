@@ -8,13 +8,21 @@
       $ip = $_SERVER["REMOTE_ADDR"];
 
       $myfile=fopen($filename, "a");
-      // fwrite($myfile, $inputs); 
-      foreach ($_POST as $key => $value) {
-        fwrite($myfile, $value);
-        fwrite($myfile, ",");
+
+      $not_written = true;
+
+      while($not_written) {
+        if (flock($myfile, LOCK_EX)) {
+          foreach ($_POST as $key => $value) {
+            fwrite($myfile, $value);
+            fwrite($myfile, ",");
+          }
+          fwrite($myfile, $ip);
+          fwrite($myfile, "\n");
+          $not_written = false;
+          flock($myfile, LOCK_UN);
+        }
       }
-      fwrite($myfile, $ip);
-      fwrite($myfile, "\n");
       
       fclose($myfile);
       
