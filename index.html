@@ -96,7 +96,7 @@
 
           <div class="col-xs portfolio-item filter-food">
             I would like to reduce 
-            <input type="number" value=0 min=0 name="red_meat_x" id="red_meat" class="normal food"> 
+            <input type="number" value=0 min=0 name="red_meat_x" id="red_meat" class="normal"> 
             servings of red meat a week.
             <br>
             You will reduce <span id="red_meat_output">0</span> kg of CO<sub>2e</sub> next year.
@@ -153,9 +153,9 @@
 
           <div class="col-xs portfolio-item filter-travel">
             I would like to carpool 
-            <input type="number" value=0 min=0 name="carpool_x" id="carpool_x"> 
+            <input type="number" value=0 min=0 name="carpool_x" id="carpool_x" class="abnormal"> 
             friends for 
-            <input type="number" value=0 min=0 name="carpool_y" id="carpool_y"> 
+            <input type="number" value=0 min=0 name="carpool_y" id="carpool_y" class="abnormal"> 
             miles a week.
             <br>
             You will reduce <span id="carpool_output">0</span> kg of CO<sub>2e</sub> next year.
@@ -163,9 +163,9 @@
 
           <div class="col-xs portfolio-item filter-travel">
             I would like to avoid 
-            <input type="number" value=0 min=0 name="flight_x" id="flight_x"> 
+            <input type="number" value=0 min=0 name="flight_x" id="flight_x" class="abnormal"> 
             number of 
-            <input type="number" value=0 min=0 name="flight_y" id="flight_y">-hour 
+            <input type="number" value=0 min=0 name="flight_y" id="flight_y" class="abnormal">-hour 
             flights that generate low socialconnection a year (a round trip counts as two flights.)
             <br>
             You will reduce <span id="flight_output">0</span> kg of CO<sub>2e</sub> next year.
@@ -240,7 +240,9 @@
 
           <!-- other -->
           <div class="col-xs portfolio-item filter-other">
-            Other <input type="text" value="none" name="other">
+            Other 
+            <!-- <input type="text" value="none" name="other" id="other"> -->
+            <textarea wrap="soft" id="other"> </textarea>
           </div>
 
         </div>

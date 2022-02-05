@@ -1403,3 +1403,16 @@ video {
   margin-right: auto;
   max-width: 100%;
 }
+
+/* Added css file to format input text boxes */
+.normal, .abnormal{
+  /* font-size: 18pt;
+  height: 42px; */
+  width : 60px;
+}
+#other {
+  word-wrap: break-word;
+  width: 100%;
+  resize: none;
+  height: 100px;
+}
