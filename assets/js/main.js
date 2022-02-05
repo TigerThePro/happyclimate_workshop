@@ -171,6 +171,15 @@
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
+      // added the following to shows food before anything else. 
+      portfolioIsotope.arrange({
+        filter: ".filter-food"
+      });
+      portfolioIsotope.on('arrangeComplete', function() {
+        AOS.refresh()
+      });
+      // lined added ends here
+
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
