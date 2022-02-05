@@ -6,6 +6,7 @@
       $filename="log.csv";
 
       $ip = $_SERVER["REMOTE_ADDR"];
+      $date = date("d/m/y");
 
       $myfile=fopen($filename, "a");
 
@@ -18,6 +19,8 @@
             fwrite($myfile, ",");
           }
           fwrite($myfile, $ip);
+          fwrite($myfile, ",");
+          fwrite($myfile, $date);
           fwrite($myfile, "\n");
           $not_written = false;
           flock($myfile, LOCK_UN);

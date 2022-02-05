@@ -1,0 +1,1 @@
+plant_diet,red_meat,other_meat,cheese,dairy_milk,chocolate,coffee,driving,carpool_x,carpool_y,flight_x,flight_y,phone,laptop,tv,jeans,shoes,tops,bottoms,dress_suits,other,submit,ip,date
