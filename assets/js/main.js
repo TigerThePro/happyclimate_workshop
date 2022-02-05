@@ -192,6 +192,8 @@
         });
         if (this.getAttribute('data-filter') == ".filter-other") {
           document.getElementById("div_submit").innerHTML = "<input type=\"submit\" name=\"submit\" id=\"submit\" value=\"I am done. Submit\"> ";
+        } else {
+          document.getElementById("div_submit").innerHTML = "";
         }
         portfolioIsotope.on('arrangeComplete', function() {
           AOS.refresh()
