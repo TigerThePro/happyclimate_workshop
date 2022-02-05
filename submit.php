@@ -15,6 +15,7 @@
       while($not_written) {
         if (flock($myfile, LOCK_EX)) {
           foreach ($_POST as $key => $value) {
+            if ($key == "other") continue;
             fwrite($myfile, $value);
             fwrite($myfile, ",");
           }
