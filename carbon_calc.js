@@ -31,6 +31,7 @@ function clear_storage() {
   localStorage.setItem("dairy_milk", 0);
   localStorage.setItem("chocolate", 0);
   localStorage.setItem("coffee", 0);
+  localStorage.setItem("food_total", 0);
   // shopping
   localStorage.setItem("phone", 0);
   localStorage.setItem("laptop", 0);
@@ -40,10 +41,12 @@ function clear_storage() {
   localStorage.setItem("tops", 0);
   localStorage.setItem("bottoms", 0);
   localStorage.setItem("dresses_suits", 0);
-  // travel
+  localStorage.setItem("shopping_total", 0);
+  // travelling
   localStorage.setItem("driving", 0);
   localStorage.setItem("flight", 0);
   localStorage.setItem("carpool", 0);
+  localStorage.setItem("travelling_total", 0);
 }
 
 
@@ -152,6 +155,32 @@ function make_report() {
   report_food();
   report_shopping();
   report_travelling();
+
+  var food_total = Number(localStorage.getItem("food_total"));
+  var shopping_total = Number(localStorage.getItem("shopping_total"));
+  var travelling_total = Number(localStorage.getItem("travelling_total"));
+  // set the data
+  document.getElementById("total_report").innerHTML = (food_total + shopping_total + travelling_total).toFixed(2);
+  var data = [
+    {x: "Food", value: food_total},
+    {x: "Shopping", value: shopping_total},
+    {x: "Travelling", value: travelling_total}
+  ];
+  // create the chart
+  var chart = anychart.pie();
+
+  // set the chart title
+  chart.title("Carbon emission reduced for the next year");
+
+  // add the data
+  chart.data(data);
+
+  chart.legend().position("right");
+  chart.legend().itemsLayout("vertical");
+
+  // display the chart in the container
+  chart.container("report-pie-chart");
+  chart.draw();
 }
 
 // report food
@@ -164,6 +193,7 @@ function report_food() {
   food_total += Number(localStorage.getItem("dairy_milk"));
   food_total += Number(localStorage.getItem("chocolate"));
   food_total += Number(localStorage.getItem("coffee"));
+  localStorage.setItem("food_total", food_total);
   food_total = food_total.toFixed(2);
   document.getElementById("food_report").innerHTML = food_total;
 }
@@ -179,6 +209,7 @@ function report_shopping() {
   shopping_total += Number(localStorage.getItem("tops"));
   shopping_total += Number(localStorage.getItem("bottoms"));
   shopping_total += Number(localStorage.getItem("dresses_suits"));
+  localStorage.setItem("shopping_total", shopping_total);
   shopping_total = shopping_total.toFixed(2);
   document.getElementById("shopping_report").innerHTML = shopping_total;
 }
@@ -189,6 +220,7 @@ function report_travelling() {
   travelling_total += Number(localStorage.getItem("driving"));
   travelling_total += Number(localStorage.getItem("flight"));
   travelling_total += Number(localStorage.getItem("carpool"));
+  localStorage.setItem("travelling_total", travelling_total);
   travelling_total = travelling_total.toFixed(2);
   document.getElementById("travelling_report").innerHTML = travelling_total;
 }

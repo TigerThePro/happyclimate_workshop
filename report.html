@@ -16,28 +16,75 @@
   <link href="assets/img/favicon.ico" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style_original.css" rel="stylesheet">
+
+  <!-- anychart js file -->
+  <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.0.1/js/anychart-pie.min.js"></script>
+
 </head>
 
 <body onload="make_report()">
-  <div>
-    <h3>Reduced from food <span id="food_report"></span> kg of CO<sub>2e</sub></h3>
-    <!-- <span id="diet_report"></span> 
-    from changing to plant diet. 
-    <span id="diet_percent"></span> -->
+
+  <br><br><br>
+
+  <div class="container d-flex align-items-center justify-content-between">
+    <div></div>
+    <div>
+      <h2>Your carbon emissions report</h2>
+    </div>
+    <div></div>
   </div>
 
-  <div>
-    <h3>reduced form shopping <span id="shopping_report"></span> kg of CO<sub>2e</sub></h3>
+  <div class="container d-flex align-items-center justify-content-between">
+    <div></div>
+    <div id="report-pie-chart"></div>
+    <div></div>
   </div>
 
-  <div>
-    <h3>
-      <h3>reduced form travelling <span id="travelling_report"></span> kg of CO<sub>2e</sub></h3>
-    </h3>
+  <div class="container d-flex align-items-center justify-content-between">
+    <div></div>
+    
+    <div>
+      <div>
+        <h4><span id="total_report"></span> kg of CO<sub>2e</sub> reduced in total </h4>
+      </div>
+      <br>
+      <div>
+        <h4><span id="food_report"></span> kg of CO<sub>2e</sub> reduced from food </h4>
+        <!-- <span id="diet_report"></span> 
+        from changing to plant diet. 
+        <span id="diet_percent"></span> -->
+      </div>
+
+      <div>
+        <h4><span id="shopping_report"></span> kg of CO<sub>2e</sub> reduced form shopping </h4>
+      </div>
+
+      <div>
+        <h4><span id="travelling_report"></span> kg of CO<sub>2e</sub> reduced form travelling </h4>
+      </div>
+    </div>
+    <div></div>
   </div>
 
-  <div>
-    <input type="button" value="Print" onclick="window.print()">
+  <br><br>
+
+  <div class="container d-flex align-items-center justify-content-between">
+    <div></div>
+    <div>
+      <input type="button" value="Print" onclick="window.print()">
+    </div>
+    <div></div>
   </div>
 
   <!-- js file -->

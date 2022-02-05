@@ -1416,3 +1416,8 @@ video {
   resize: none;
   height: 100px;
 }
+
+#report-pie-chart {
+  width: 600px;
+  height: 400px;
+}
