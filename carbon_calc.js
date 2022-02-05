@@ -81,8 +81,19 @@ if (document.getElementById("diet_yes") && document.getElementById("diet_no")) {
 }
 
 
-// all normal class
+// get all normal classes
 var normal_inputs = document.getElementsByClassName("normal");
+// get all abnormal classes
+var abnormal_inputs = document.getElementsByClassName("abnormal");
+
+// no negative numbers on number inputs
+for (i = 0; i < normal_inputs.length; i++) {
+  normal_inputs[i].setAttribute("oninput", "this.value = !!this.value && this.value >= 0 ? Math.floor(Math.abs(this.value)) : Math.floor(this.value)");
+}
+for (i = 0; i < abnormal_inputs.length; i++) {
+  abnormal_inputs[i].setAttribute("oninput", "this.value = !!this.value && this.value >= 0 ? Math.floor(Math.abs(this.value)) : Math.floor(this.value)");
+}
+
 for (i = 0; i < normal_inputs.length; i++) {
   normal_inputs[i].addEventListener("input", function(e) {
     var x = this.value;
