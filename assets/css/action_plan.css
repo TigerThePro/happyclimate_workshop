@@ -1,0 +1,7 @@
+textarea {
+  overflow: hidden;
+  padding: 0;
+  outline: none;
+  /* max-width: 80%; */
+  resize: none;
+}

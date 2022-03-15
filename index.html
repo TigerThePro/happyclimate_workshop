@@ -33,6 +33,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style_original.css" rel="stylesheet">
+  <link href="assets/css/action_plan.css" rel="stylesheet">
 
   
 
@@ -45,7 +46,7 @@
   ======================================================== -->
 </head>
 
-<body onload="clear_storage()">
+<body onload="clear_storage(); init()">
     <!-- ======= Intro ======= -->
     <!-- using the contact section background -->
   <section id="contact" class="contact section-bg">
@@ -85,7 +86,7 @@
       <div></div>
       <div>
         <table>
-          <tbody>
+          <thead>
             <tr>
               <td> Team Member</td>
               <td> Goal </td>
@@ -93,12 +94,36 @@
               <td> Anticipated obstacles</td>
               <td> Potential solutions</td>
             </tr>
+          </thead>
+          <tbody>
             <tr>
+              <!-- <td><input type="text"></td>
               <td><input type="text"></td>
               <td><input type="text"></td>
               <td><input type="text"></td>
-              <td><input type="text"></td>
-              <td><input type="text"></td>
+              <td><input type="text"></td> -->
+
+              <!-- <td><input type="text" style="width:50%;"></td>
+              <td><input type="text" style="width:50%;"></td>
+              <td><input type="text" style="width:50%;"></td>
+              <td><input type="text" style="width:50%;"></td>
+              <td><input type="text" style="width:50%;"></td> -->
+                
+              <td> 
+                <textarea rows="2" style="height:2em;" id="text" wrap="soft"></textarea>
+              </td>
+              <td> 
+                <textarea rows="2" style="height:2em;" id="text" wrap="soft"></textarea>
+              </td>
+              <td> 
+                <textarea rows="2" style="height:2em;" id="text" wrap="soft"></textarea>
+              </td>
+              <td> 
+                <textarea rows="2" style="height:2em;" id="text" wrap="soft"></textarea>
+              </td>
+              <td> 
+                <textarea rows="2" style="height:2em;" id="text" wrap="soft"></textarea>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -345,6 +370,7 @@
 
   <!-- js file -->
   <script type="text/javascript" src="carbon_calc.js"></script>
+  <script type="text/javascript" src="team_action_plan.js"></script>
 
 </body>
 
